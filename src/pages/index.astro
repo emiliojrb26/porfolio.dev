@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import ArticleIcon from "../components/icons/Article.astro";
+import Projects from "../components/Projects.astro";
+import Resume from "../components/icons/Resume.astro";
+import Post from "../components/Post.astro";
+---
+
+<Layout
+  title="Porfolio of Emilio Rodriguez - Developer web and mobile."
+  description="Hire Emilio Rodriguez, specialized in the creation of unique applications."
+>
+  <main class="px-4 bg">
+    <SectionContainer id="about" class="pt-32 pb-24">
+      <div
+        class="relative mb-4 size-32 bg-yellow-100 border-8 border-white shadow-lg rounded-full overflow-hidden"
+      >
+        <img
+          sizes="100vw"
+          class="rounded-full"
+          src="https://eduardorl.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.2d4d367d.png&w=1920&q=30"
+          alt="emiliorb photo"
+        />
+      </div>
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, I'm Emilio <a
+          href="https://linkedin.com/in/emiliojrb"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance">
+        <span>+2 years of experience.</span><span class="text-yellow-400">
+          Web and mobile developer.</span
+        >
+        <span class="text-red-400">From Guanacaste, Costa Rica.</span>
+        <span class="text-sky-400"
+          >Specialized in creating unique applications.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/emiliojrb">
+          <LinkedInIcon class="size-4 md:size-6" />
+           LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/emiliojrb26">
+          <GitHubIcon class="size-4 md:size-6" />
+           GitHub
+        </SocialPill>
+        <SocialPill href="mailto:emiliorb26@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+           emiliorb26@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer class="pb-24" id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+         Work Experience
+      </h2>
+      <Experience />
+      <nav class="flex">
+        <SocialPill href="./src/assets/EmilioRodriguezCV-English.pdf">
+          Download CV
+          <Resume class="size-4 md:size-6" />
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+         Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer class="pb-24" id="articles">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ArticleIcon class="size-7" />
+         Articles
+      </h2>
+      <Post />
+    </SectionContainer>
+  </main>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import PostItem from "./PostItem.astro";
+const POST = [
+  {
+    logo: "/src/assets/images/git.svg",
+    date: "dec. 2023",
+    link: "https://github.com/emiliojrb26/Conventional-Commits",
+    title: "Conventional Commits",
+  },
+];
+---
+
+<ol>
+  {
+    POST.map((article) => (
+      <li>
+        <PostItem {...article} />
+      </li>
+    ))
+  }
+</ol>

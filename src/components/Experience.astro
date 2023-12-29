@@ -1,0 +1,27 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "oct. 2022 - dic. 2023",
+    title: "Project Manager − GSIT",
+    description:
+      "Project management, from planning to delivery, with experience in Scrum, change management, and client meetings.",
+  },
+  {
+    date: "oct. 2022 - dic. 2023",
+    title: "QA Tester − GSIT",
+    description:
+      "Manual testing, system testing, test planning, quality assurance, and QA automation.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
